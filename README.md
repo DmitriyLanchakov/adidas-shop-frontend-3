@@ -1,1 +1,2 @@
-# react-shop
+# Adidas Shop on React JS
+@kirkorovgalkin
