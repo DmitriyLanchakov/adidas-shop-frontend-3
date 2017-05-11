@@ -1,33 +1,11 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 import './List.css';
-
-import logo from './img/logo.png';
 
 export default () => {
   return (
     <div className="container">
-      <aside className="sidebar">
-        <a href="/" title="Adidas Online Shop" className="logo">
-          <img src={logo} alt="Adidas Logo" />
-        </a>
-
-        <form className="search-form">
-          <label htmlFor="search-input" className="search-input-label">Search</label>
-          <input type="text" name="search" className="search-form-input" id="search-input" />
-        </form>
-
-        <nav className="catalog-categories">
-          <a href="#" title="Sports Category" className="has-submenu opened">Sports</a>
-          <nav className="catalog-categories catalog-subcategories">
-            <a href="#" title="Adidas Shoes" className="current">Shoes</a>
-            <a href="#" title="Adidas Clothing">Clothing</a>
-            <a href="#" title="Adidas Accesories">Accesories</a>
-          </nav>
-          <a href="#" title="Brands Category">Brands</a>
-          <a href="#" title="Micoach Category">Micoach</a>
-        </nav>
-      </aside>
-
+      <Sidebar />
       <main className="catalog">
         <h2>Items Catalog</h2>
         <nav className="catalog-filters">

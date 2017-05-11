@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route, Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 import List from './List';
 import Show from './Show';
 
