@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route, Switch
+  Route
 } from 'react-router-dom';
 import List from './List';
 import Show from './Show';
@@ -11,10 +11,10 @@ class App extends Component {
   render () {
     return (
       <Router>
-        <Switch>
+        <div>
           <Route exact path="/" component={List}  />
           <Route path="/item" component={Show}  />
-        </Switch>
+        </div>
       </Router>
     );
   }
