@@ -4,16 +4,16 @@ import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom'
-import Main from './Main.js';
-import Item from './Item.js';
+import List from './List.js';
+import Show from './Show.js';
 
 class App extends Component {
   render () {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={Main}  />
-          <Route path="/item" component={Item}  />
+          <Route exact path="/" component={List}  />
+          <Route path="/item" component={Show}  />
         </Switch>
       </Router>
     );
