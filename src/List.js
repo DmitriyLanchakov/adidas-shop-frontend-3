@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import List from './ItemList';
+import Catalog from './Catalog';
 import './List.css';
 
 export default () => {
@@ -26,7 +26,7 @@ export default () => {
             <button className="filter-button">42</button>
           </div>
         </nav>
-        <List />
+        <Catalog />
       </main>
     </div>
   );
