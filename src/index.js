@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom'
-import List from './List.js';
-import Show from './Show.js';
+import List from './List';
+import Show from './Show';
 
 class App extends Component {
   render () {
