@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route, Switch
-} from 'react-router-dom'
-import List from './List';
-import Show from './Show';
+  Route
+} from 'react-router-dom';
+import List from './Catalog';
+import Details from './Details';
+import Sidebar from './Sidebar';
 
 class App extends Component {
   render () {
     return (
       <Router>
-        <Switch>
+        <main className="container">
+          <Sidebar />
           <Route exact path="/" component={List}  />
-          <Route path="/item" component={Show}  />
-        </Switch>
+          <Route path="/item" component={Details}  />
+        </main>
       </Router>
     );
   }
