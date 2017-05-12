@@ -12,11 +12,11 @@ class App extends Component {
   render () {
     return (
       <Router>
-        <div className="container">
+        <main className="container">
           <Sidebar />
           <Route exact path="/" component={List}  />
           <Route path="/item" component={Details}  />
-        </div>
+        </main>
       </Router>
     );
   }
