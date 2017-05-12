@@ -4,16 +4,18 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import List from './List';
-import Show from './Show';
+import List from './Catalog';
+import Details from './Details';
+import Sidebar from './Sidebar';
 
 class App extends Component {
   render () {
     return (
       <Router>
-        <div>
+        <div className="container">
+          <Sidebar />
           <Route exact path="/" component={List}  />
-          <Route path="/item" component={Show}  />
+          <Route path="/item" component={Details}  />
         </div>
       </Router>
     );

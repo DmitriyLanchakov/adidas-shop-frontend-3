@@ -2,25 +2,25 @@
 
 @font-face {
   font-family: 'AndaleMono';
-  src: url('./fonts/Andale-Mono.woff') format('woff'),
-       url('./fonts/Andale-Mono.ttf') format('truetype');
+  src: url('../fonts/Andale-Mono.woff') format('woff'),
+       url('../fonts/Andale-Mono.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'AvenirNextBold';
-  src: url('./fonts/avenir-next-bold.eot');
-  src: url('./fonts/avenir-next-bold.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/avenir-next-bold.woff') format('woff'),
-       url('./fonts/avenir-next-bold.ttf') format('truetype'),
-       url('./fonts/avenir-next-bold.svg') format('svg');
+  src: url('../fonts/avenir-next-bold.eot');
+  src: url('../fonts/avenir-next-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/avenir-next-bold.woff') format('woff'),
+       url('../fonts/avenir-next-bold.ttf') format('truetype'),
+       url('../fonts/avenir-next-bold.svg') format('svg');
 }
 
 @font-face {
   font-family: 'AvenirNextReg';
-  src: url('./fonts/avenir-next-regular.eot');
-  src: url('./fonts/avenir-next-regular.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/avenir-next-regular.woff') format('woff'),
-       url('./fonts/avenir-next-regular.svg') format('svg');
+  src: url('../fonts/avenir-next-regular.eot');
+  src: url('../fonts/avenir-next-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/avenir-next-regular.woff') format('woff'),
+       url('../fonts/avenir-next-regular.svg') format('svg');
 }
 
 /* ========== LAYOUT ========== */
@@ -145,7 +145,7 @@ button:focus {
     box-sizing: border-box;
     width: 100%;
     padding: 10px 14px 10px 56px;
-    background: #0e0e0e url('./img/search-icon.svg') no-repeat 14px 7px;
+    background: #0e0e0e url('../img/search-icon.svg') no-repeat 14px 7px;
     border: none;
     border-bottom: 4px solid #373737;
     color: #fff;
