@@ -13,7 +13,7 @@ export default (props) => {
     <div className={wrapperClass}>
       <img src={props.image} alt="Adidas Shoes 1" className="item-image" />
       <Link to="/item" title="Single item page" className="item-link">{'$' + props.price}</Link>
-      {props.sale && <SaleLabel />}
+      {props.sale && <SaleLabel>Sale</SaleLabel>}
     </div>
   );
 };

@@ -1,13 +1,15 @@
-import React from 'react';
-import ClassNames from 'classnames';
+import styled from 'styled-components';
 
-export default (props) => {
+const Label = styled.span`
+  display: block;
+  position: ${props => props.static ? 'static' : 'absolute'};
+  top: 17px;
+  right: 17px;
+  padding: 7px 20px;
+  background: #ff5c5c;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+`;
 
-  let labelClass = ClassNames('sale-label', {
-    'static' : props.static
-  });
-
-  return (
-    <span className={labelClass}>Sale</span>
-  );
-};
+export default Label;

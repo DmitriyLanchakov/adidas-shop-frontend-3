@@ -14,7 +14,7 @@ export default () => {
       <div className="product-heading_price-color-picker">
         <div className="product-heading_color-label">
           <ColorPicker />
-          <SaleLabel static/>
+          <SaleLabel static>Sale</SaleLabel>
         </div>
         <h2>170$</h2>
       </div>
