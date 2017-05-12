@@ -1,7 +1,11 @@
 import React from 'react';
+import ClassNames from 'classnames';
 
 export default (props) => {
+
+  let btnClass = ClassNames('choose-color-button', props.color);
+
   return (
-    <button className={"choose-color-button " + (props.color ? props.color: '')}></button>
+    <button className={btnClass}></button>
   );
 };

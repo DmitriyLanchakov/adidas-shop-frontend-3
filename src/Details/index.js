@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Gallery from './Gallery';
-import Paragraph from './Paragraph';
+import Description from './Description';
 import Button from './Button';
 import './Details.css'
 
@@ -11,7 +11,7 @@ export default () => {
       <div className="product-container">
         <Header />
         <Gallery />
-        <Paragraph />
+        <Description />
       </div>
       <Button />
     </main>
