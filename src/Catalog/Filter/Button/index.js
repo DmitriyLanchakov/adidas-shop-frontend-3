@@ -1,7 +1,13 @@
 import React from 'react';
+import ClassNames from 'classnames';
 
 export default (props) => {
+
+  let btnClass = ClassNames('filter-button', props.classes, {
+    'current' : props.current
+  });
+
   return (
-    <button className={"filter-button " + (props.classes ? props.classes : ' ') + (props.current ? ' current' : '')}>{props.value}</button>
+    <button className={btnClass}>{props.value}</button>
   );
 };
