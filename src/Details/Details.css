@@ -618,9 +618,15 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .product-buy-now-button {
-    width: calc(100% - 414px);
+    width: calc(100% - 327px);
     font-size: 32px;
     padding: 36px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .product-buy-now-button {
+    width: calc(100% - 414px);
   }
 }
 
