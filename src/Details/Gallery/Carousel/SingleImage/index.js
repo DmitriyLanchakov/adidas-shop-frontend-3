@@ -2,9 +2,8 @@ import React from 'react';
 import ClassNames from 'classnames';
 
 export default (props) => {
-
-  let imgClass = ClassNames({
-    'current' : props.current
+  const imgClass = ClassNames({
+    current: props.current,
   });
 
   return (

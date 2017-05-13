@@ -1,6 +1,6 @@
 /* ========== LAYOUT ========== */
 
-.container {
+.main-container {
   display: flex;
   flex-flow: column nowrap;
   padding: 0;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .main-container {
     flex-flow: row nowrap;
   }
 }

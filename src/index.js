@@ -1,31 +1,26 @@
 // eslint-disable react/jsx-filename-extension
 
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
 } from 'react-router-dom';
 import Catalog from './Catalog';
 import Details from './Details';
 import Sidebar from './Sidebar';
 import './styles/fonts.css';
 
-class App extends Component {
-  render () {
-    return (
-      <Router>
-        <main className="container">
-          <Sidebar />
-          <Route exact path="/" component={Catalog}  />
-          <Route path="/item" component={Details}  />
-        </main>
-      </Router>
-    );
-  }
-}
-
+const App = () => (
+  <Router>
+    <main className="main-container">
+      <Sidebar />
+      <Route exact path="/" component={Catalog} />
+      <Route path="/item" component={Details} />
+    </main>
+  </Router>
+);
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

@@ -58,16 +58,17 @@
   }
 }
 
-.container {
+.main-container {
   display: flex;
   flex-flow: column nowrap;
   padding: 0;
   margin: 0;
   transition: none;
+  flex: 1 0 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .main-container {
     flex-flow: row nowrap;
   }
 }

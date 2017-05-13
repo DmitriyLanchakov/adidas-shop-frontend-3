@@ -8,15 +8,13 @@ import caption2 from './adidas-shoes-3_caption2.jpg';
 import caption3 from './adidas-shoes-3_caption3.jpg';
 import caption4 from './adidas-shoes-3.jpg';
 
-export default () => {
-  return (
-    <div className="product-image-captions">
-      <SingleImage src={caption1} />
-      <SingleImage src={caption2} />
-      <SingleImage src={caption3} />
-      <SingleImage src={caption4} current/>
-      <MoreLabel />
-      <MoreButton />
-    </div>
+export default () => (
+  <div className="product-image-captions">
+    <SingleImage src={caption1} />
+    <SingleImage src={caption2} />
+    <SingleImage src={caption3} />
+    <SingleImage src={caption4} current />
+    <MoreLabel />
+    <MoreButton />
+  </div>
   );
-};
