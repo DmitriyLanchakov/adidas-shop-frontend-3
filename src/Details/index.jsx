@@ -12,6 +12,6 @@ export default () => (
       <Gallery />
       <Description />
     </div>
-    <Button />
+    <Button>Buy now</Button>
   </main>
-  );
+);

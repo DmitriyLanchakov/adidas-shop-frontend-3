@@ -1,7 +1,8 @@
 import React from 'react';
+import Label from './styles';
 
 export default () => (
-  <div className="product-more-images-label">
+  <Label>
     <span />
-  </div>
+  </Label>
   );

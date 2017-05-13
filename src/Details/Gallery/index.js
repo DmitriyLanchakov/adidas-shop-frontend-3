@@ -1,5 +1,5 @@
 import React from 'react';
-import FullImage from './FillImage';
+import FullImage from './FullImage';
 import Carousel from './Carousel';
 
 
