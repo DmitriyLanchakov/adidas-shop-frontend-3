@@ -6,7 +6,7 @@ const Image = styled.img`
   box-sizing: border-box;
   outline: ${props => (props.current ? '5px solid #e8e8ea' : '5px solid #fff')};
   cursor: pointer;
-  margin: ${props => (props.first ? 0 : '0 5px')};
+  margin: '0 5px';
   ${media.tablet`
     margin: ${props => (props.first ? 0 : '0 14px')};
   `}
