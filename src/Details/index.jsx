@@ -4,7 +4,6 @@ import Header from './Header';
 import Gallery from './Gallery';
 import Description from './Description';
 import Button from './Button';
-import './Details.css';
 
 export default () => (
   <Wrapper>
