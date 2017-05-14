@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import styled from 'styled-components';
 import media from './styles/media';
-import Catalog from './Catalog';
+import List from './List';
 import Details from './Details';
 import Sidebar from './Sidebar';
 import './styles/common.css';
@@ -30,7 +30,7 @@ const App = () => (
   <Router>
     <Main>
       <Sidebar />
-      <Route exact path="/" component={Catalog} />
+      <Route exact path="/" component={List} />
       <Route path="/item" component={Details} />
     </Main>
   </Router>
