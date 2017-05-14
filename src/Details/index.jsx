@@ -1,4 +1,5 @@
 import React from 'react';
+import { Wrapper, Product } from './styles';
 import Header from './Header';
 import Gallery from './Gallery';
 import Description from './Description';
@@ -6,12 +7,12 @@ import Button from './Button';
 import './Details.css';
 
 export default () => (
-  <main className="catalog">
-    <div className="product-container">
+  <Wrapper>
+    <Product>
       <Header />
       <Gallery />
       <Description />
-    </div>
+    </Product>
     <Button>Buy now</Button>
-  </main>
+  </Wrapper>
 );

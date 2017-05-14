@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 
 
 export default () => (
-  <div className="product-image-gallery">
+  <div>
     <FullImage />
     <Carousel />
   </div>

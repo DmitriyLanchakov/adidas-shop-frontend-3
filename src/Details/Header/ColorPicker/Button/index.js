@@ -1,10 +1,29 @@
-import React from 'react';
-import ClassNames from 'classnames';
+import styled from 'styled-components';
 
-export default (props) => {
-  const btnClass = ClassNames('choose-color-button', props.color);
+const Button = styled.button`
+  border: none;
+  background: ${props => props.color || '#fff'};
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  margin-left: 13px;
+  transition-duration: 0.2s;
 
-  return (
-    <button className={btnClass} />
-  );
-};
+  & + button {
+    margin-left: 12px;
+  }
+
+  & + span {
+    margin-left: 29px;
+  }
+
+  &:hover {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+  }
+`;
+
+export default Button;
