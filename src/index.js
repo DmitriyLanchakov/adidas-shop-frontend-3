@@ -7,7 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import styled from 'styled-components';
-import media from './styles/media'
+import media from './styles/media';
 import Catalog from './Catalog';
 import Details from './Details';
 import Sidebar from './Sidebar';
