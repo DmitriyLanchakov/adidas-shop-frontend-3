@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 import React from 'react';
 import { Wrapper, StyledLink, Image } from './styles';
 import SaleLabel from '../../Components/SaleLabel';
