@@ -1,14 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import Button from './Button';
 import { Filter, Icon, Container, HeadingLabel } from './styles';
+
+const StyledCont = styled(Container)`
+  & button:first-child {
+    padding: 0 10px 0 0;
+  }
+`;
 
 export default () => (
   <Filter>
     <Icon />
-    <Container>
+    <StyledCont>
       <Button current>Men</Button>
       <Button>Women</Button>
-    </Container>
+    </StyledCont>
     <Container>
       <HeadingLabel>Size</HeadingLabel>
       <Button>36</Button>
