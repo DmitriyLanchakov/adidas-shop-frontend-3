@@ -20,7 +20,7 @@ const Captions = styled.div`
   `}
 
   & img:first-child {
-    margin: 0;
+    margin-left: 0;
   }
 `;
 
