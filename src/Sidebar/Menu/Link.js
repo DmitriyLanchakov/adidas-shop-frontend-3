@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default styled(Link)`
   margin-bottom: 30px;
-  color: ${props => (props.opened || props.current ? '#fff' : '#3c3c3c')};
+  color: #3c3c3c;
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -11,8 +11,8 @@ export default styled(Link)`
   align-items: center;
   justify-content: center;
 
-  &:after {
-    display: ${props => (props.hasSubmenu ? 'block' : 'none')};
+  &.hasSubmenu:after {
+    display: block;
     content: '';
     width: 6px;
     height: 6px;
@@ -25,11 +25,13 @@ export default styled(Link)`
     transition-duration: 0.2s;
   }
 
-  &:hover:after {
-    transform: ${props => (props.opened ? 'rotate(225deg)' : '')};
+  &.hasSubmenu.opened:hover:after {
+    transform: rotate(225deg);
   }
 
-  &:hover {
+  &:hover,
+  &.opened,
+  &.current {
     color: #fff;
   }
 `;

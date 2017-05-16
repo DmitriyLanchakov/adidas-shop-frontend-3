@@ -6,7 +6,7 @@ import Menu from './Wrapper';
 
 export default () => (
   <Menu>
-    <Link to="#" title="Sports Category" hasSubmenu opened>Sports</Link>
+    <Link to="#" title="Sports Category" className="hasSubmenu opened">Sports</Link>
     <Submenu />
     <Link to="#" title="Brands Category">Brands</Link>
     <Link to="#" title="Micoach Category">Micoach</Link>
