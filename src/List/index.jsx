@@ -10,7 +10,7 @@ import shoesImage2 from './adidas-shoes-2.jpg';
 import shoesImage3 from './adidas-shoes-3.jpg';
 
 const CardCol = ({ children }) => (
-  <Col xs={12} sm={6} md={4} lg={3}>
+  <Col xs={12} sm={6} md={4}>
     {children}
   </Col>
 );
