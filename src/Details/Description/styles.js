@@ -5,7 +5,7 @@ export const Paragraph = styled.p`
   font-family: 'AvenirNextReg';
   font-weight: 800;
   font-size: 20px;
-  line-height: 1.52;
+  line-height: 1.5;
   color: #d8d8d8;
   margin-bottom: 0;
   padding:0;

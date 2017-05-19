@@ -16,7 +16,7 @@ export default styled(Link)`
     content: '';
     width: 6px;
     height: 6px;
-    border: 3px solid #fff;
+    border: 5px solid #fff;
     border-left: none;
     border-top: none;
     border-radius: 3px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import { Filter, Icon, Container, HeadingLabel } from './styles';
+import { Filter, Icon, Container, Label } from './styles';
 
 const StyledCont = styled(Container)`
   & button:first-child {
@@ -17,7 +17,7 @@ export default () => (
       <Button>Women</Button>
     </StyledCont>
     <Container>
-      <HeadingLabel>Size</HeadingLabel>
+      <Label>Size</Label>
       <Button>36</Button>
       <Button>37</Button>
       <Button>38</Button>
