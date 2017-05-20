@@ -33,7 +33,7 @@ export default styled(Link)`
     border-color: ${white};
   }
 
-  &.hasSubmenu.opened:hover:after {
+  &.hasSubmenu.opened:after {
     transform: rotate(225deg);
   }
 
