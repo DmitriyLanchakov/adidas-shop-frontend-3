@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const gray = '#3c3c3c';
+const white = '#fff';
+
 export default styled(Link)`
   margin-bottom: 30px;
-  color: #3c3c3c;
+  color: ${gray};
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -16,13 +19,18 @@ export default styled(Link)`
     content: '';
     width: 6px;
     height: 6px;
-    border: 5px solid #fff;
+    border: 5px solid ${gray};
     border-left: none;
     border-top: none;
     border-radius: 3px;
     transform: rotate(45deg);
     margin-left: 12px;
     transition-duration: 0.2s;
+  }
+
+  &.hasSubmenu:hover:after,
+  &.hasSubmenu.opened:after {
+    border-color: ${white};
   }
 
   &.hasSubmenu.opened:hover:after {
@@ -32,6 +40,14 @@ export default styled(Link)`
   &:hover,
   &.opened,
   &.current {
-    color: #fff;
+    color: ${white};
+  }
+
+  & + nav {
+    display: none;
+  }
+
+  &.opened + nav {
+    display: block;
   }
 `;
