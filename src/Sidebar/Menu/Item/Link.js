@@ -6,7 +6,7 @@ const white = '#fff';
 
 export default styled(Link)`
   margin-bottom: 30px;
-  color: ${gray};
+  color: ${props => (props.opened || props.current ? white : gray)};
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -14,40 +14,26 @@ export default styled(Link)`
   align-items: center;
   justify-content: center;
 
-  &.hasSubmenu:after {
-    display: block;
+  &:after {
+    display: ${props => (props.hasSubmenu ? 'block' : 'none')};
     content: '';
     width: 6px;
     height: 6px;
-    border: 5px solid ${gray};
+    border: 5px solid;
+    border-color: ${props => (props.opened ? white : gray)};
     border-left: none;
     border-top: none;
     border-radius: 3px;
-    transform: rotate(45deg);
+    transform: ${props => (props.opened ? 'rotate(225deg)' : 'rotate(45deg)')};
     margin-left: 12px;
     transition-duration: 0.2s;
   }
 
-  &.hasSubmenu:hover:after,
-  &.hasSubmenu.opened:after {
+  &:hover:after {
     border-color: ${white};
   }
 
-  &.hasSubmenu.opened:after {
-    transform: rotate(225deg);
-  }
-
-  &:hover,
-  &.opened,
-  &.current {
+  &:hover {
     color: ${white};
-  }
-
-  & + nav {
-    display: none;
-  }
-
-  &.opened + nav {
-    display: block;
   }
 `;
