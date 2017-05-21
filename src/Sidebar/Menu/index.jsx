@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from './Link';
-import Submenu from './Submenu';
+import Submenu from './Submenu.js';
 import Menu from './Wrapper';
 
 export default () => (
