@@ -19,7 +19,7 @@ class StateLink extends Component {
       opened: this.state.isOpened,
     });
     return (
-      <Link to={this.props.to} title={this.props.title} className={LinkClass} onClick={this.handleLinkClick}>
+      <Link to={this.props.to} className={LinkClass} onClick={this.handleLinkClick}>
         {this.props.children}
       </Link>
     );
