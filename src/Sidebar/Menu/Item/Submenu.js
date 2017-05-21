@@ -4,6 +4,10 @@ import Wrapper from '../Wrapper';
 import Link from './Link';
 
 export const Submenu = styled(Wrapper)`
+  position: static;
+  width: auto;
+  padding: 0;
+  margin: 50px 0;
   ${media.tablet`
     margin: -15px 0 50px;
   `}

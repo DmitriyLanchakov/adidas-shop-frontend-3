@@ -1,8 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+import media from '../../styles/media';
 import Menu from './Wrapper';
 import Item from './Item';
 
-const Wrapper = styled.div`
+const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
   ${media.tablet`
@@ -10,7 +12,7 @@ const Wrapper = styled.div`
   `};
 `;
 
-const ToggleMenu = styled.button`
+const Toggle = styled.button`
   background: #fff;
   border: none;
   width: 50px;
@@ -55,9 +57,14 @@ const ToggleMenu = styled.button`
 `;
 
 export default () => (
-  <Menu>
-    <Item to="#" title="Footbal" hasSubmenu />
-    <Item to="#" title="Running" hasSubmenu />
-    <Item to="#" title="Basketball" hasSubmenu />
-  </Menu>
+  <div>
+    <ToggleWrapper>
+      <Toggle />
+    </ToggleWrapper>
+    <Menu>
+      <Item to="#" title="Footbal" hasSubmenu />
+      <Item to="#" title="Running" hasSubmenu />
+      <Item to="#" title="Basketball" hasSubmenu />
+    </Menu>
+  </div>
 );
