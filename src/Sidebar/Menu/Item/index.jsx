@@ -28,12 +28,11 @@ class Menu extends Component {
         >
           {this.props.title}
         </Link>
-        {this.state.isOpened &&
-        <Submenu>
+        <Submenu opened={this.state.isOpened}>
           <SubLink to="#" title="Adidas Shoes" className="current">Shoes</SubLink>
           <SubLink to="#" title="Adidas Clothing">Clothing</SubLink>
           <SubLink to="#" title="Adidas Accesories">Accesories</SubLink>
-        </Submenu>}
+        </Submenu>
       </div>
     );
   }

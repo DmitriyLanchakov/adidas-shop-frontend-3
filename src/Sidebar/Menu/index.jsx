@@ -1,70 +1,35 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from '../../styles/media';
+import React, { Component } from 'react';
 import Menu from './Wrapper';
 import Item from './Item';
+import { ToggleWrapper, Toggle } from './ToggleButton';
 
-const ToggleWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  ${media.tablet`
-    display: block;
-  `};
-`;
-
-const Toggle = styled.button`
-  background: #fff;
-  border: none;
-  width: 50px;
-  height: 4px;
-  position: relative;
-
-  &.opened {
-    transform: rotate(45deg);
+class MainMenu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOpened: false };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  &:before,
-  &:after {
-    content: '';
-    width: 50px;
-    height: 4px;
-    display: block;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s ease;
+  handleClick() {
+    this.setState(prevState => ({
+      isOpened: !prevState.isOpened,
+    }));
   }
 
-  &:before {
-    bottom: 10px;;
+  render() {
+    return (
+      <div>
+        <ToggleWrapper>
+          <Toggle opened={this.state.isOpened} onClick={this.handleClick} />
+        </ToggleWrapper>
+        <Menu opened={this.state.isOpened}>
+          <Item to="#" title="Footbal" hasSubmenu />
+          <Item to="#" title="Running" hasSubmenu />
+          <Item to="#" title="Basketball" hasSubmenu />
+        </Menu>
+      </div>
+    );
   }
+}
 
-  &.opened:before {
-    display: none;
-  }
-
-  &:after {
-    top: 10px;
-  }
-
-  &.opened:after {
-    transform: rotate(-90deg) translate(10px, 1px);
-  }
-
-  ${media.tablet`
-    display: none;
-  `};
-`;
-
-export default () => (
-  <div>
-    <ToggleWrapper>
-      <Toggle />
-    </ToggleWrapper>
-    <Menu>
-      <Item to="#" title="Footbal" hasSubmenu />
-      <Item to="#" title="Running" hasSubmenu />
-      <Item to="#" title="Basketball" hasSubmenu />
-    </Menu>
-  </div>
-);
+export default MainMenu;

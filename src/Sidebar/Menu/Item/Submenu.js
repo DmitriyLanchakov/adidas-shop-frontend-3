@@ -4,12 +4,15 @@ import Wrapper from '../Wrapper';
 import Link from './Link';
 
 export const Submenu = styled(Wrapper)`
+  display: block;
   position: static;
   width: auto;
   padding: 0;
-  margin: 50px 0;
+  margin: ${props => (props.opened ? '50px 0' : '0')};
+  overflow: hidden;
+  max-height: ${props => (props.opened ? '200px' : '0')};
   ${media.tablet`
-    margin: -15px 0 50px;
+    margin: ${props => (props.opened ? '-15px 0 50px' : '-15px 0 0 0')};
   `}
 `;
 

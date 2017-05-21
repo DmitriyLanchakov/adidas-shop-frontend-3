@@ -7,7 +7,7 @@ const white = '#fff';
 
 export default styled(Link)`
   margin-bottom: 30px;
-  color: ${props => (props.opened || props.current ? white : gray)};
+  color: ${white};
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -15,7 +15,7 @@ export default styled(Link)`
   align-items: center;
   justify-content: center;
   ${media.tablet`
-    color: ${gray};
+    color: ${props => (props.opened || props.current ? white : gray)};
   `};
 
   &:after {
@@ -24,7 +24,7 @@ export default styled(Link)`
     width: 6px;
     height: 6px;
     border: 5px solid;
-    border-color: ${props => (props.opened ? white : gray)};
+    border-color: ${white};
     border-left: none;
     border-top: none;
     border-radius: 3px;
@@ -32,7 +32,7 @@ export default styled(Link)`
     margin-left: 12px;
     transition-duration: 0.2s;
     ${media.tablet`
-      border-color: ${gray};
+      border-color: ${props => (props.opened ? white : gray)};
     `};
   }
 

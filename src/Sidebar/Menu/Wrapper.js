@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import media from '../../styles/media';
 
 export default styled.nav`
-  display: block;
+  display: ${props => (props.opened ? 'block' : 'none')};
   position: absolute;
   left: 3%;
   width: 94%;
