@@ -1,10 +1,6 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import styled from 'styled-components';
-import media from '../../styles/media';
-import Link from './Link';
-import Submenu from './Submenu';
+import React from 'react';
 import Menu from './Wrapper';
+import Item from './Item';
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,75 +54,10 @@ const ToggleMenu = styled.button`
   `};
 `;
 
-class MainMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isOpened: false };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState(prevState => ({
-      isOpened: !prevState.isOpened,
-    }));
-  }
-  render() {
-    const ToggleClass = classNames({
-      opened: this.state.isOpened,
-    });
-    return (
-      <Wrapper>
-        <ToggleMenu onClick={this.handleClick} className={ToggleClass} />
-        {this.state.isOpened &&
-        <Menu>
-          <Link to="#" title="Sports Category" hasSubmenu>Football</Link>
-          <Submenu>
-            <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-            <Link to="#" title="Adidas Clothing">Clothing</Link>
-            <Link to="#" title="Adidas Accesories">Accesories</Link>
-          </Submenu>
-          <Link to="#" title="Brands Category" hasSubmenu>Running</Link>
-          <Submenu>
-            <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-            <Link to="#" title="Adidas Clothing">Clothing</Link>
-            <Link to="#" title="Adidas Accesories">Accesories</Link>
-          </Submenu>
-          <Link to="#" title="Micoach Category" hasSubmenu>Basketball</Link>
-          <Submenu>
-            <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-            <Link to="#" title="Adidas Clothing">Clothing</Link>
-            <Link to="#" title="Adidas Accesories">Accesories</Link>
-          </Submenu>
-        </Menu> }
-      </Wrapper>
-    );
-  }
-}
-
-export default MainMenu;
-/*
 export default () => (
-  <Wrapper>
-    <ToggleMenu className="opened" />
-    <Menu>
-      <Link to="#" title="Sports Category" hasSubmenu>Football</Link>
-      <Submenu>
-        <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-        <Link to="#" title="Adidas Clothing">Clothing</Link>
-        <Link to="#" title="Adidas Accesories">Accesories</Link>
-      </Submenu>
-      <Link to="#" title="Brands Category" hasSubmenu>Running</Link>
-      <Submenu>
-        <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-        <Link to="#" title="Adidas Clothing">Clothing</Link>
-        <Link to="#" title="Adidas Accesories">Accesories</Link>
-      </Submenu>
-      <Link to="#" title="Micoach Category" hasSubmenu>Basketball</Link>
-      <Submenu>
-        <Link to="#" title="Adidas Shoes" className="current">Shoes</Link>
-        <Link to="#" title="Adidas Clothing">Clothing</Link>
-        <Link to="#" title="Adidas Accesories">Accesories</Link>
-      </Submenu>
-    </Menu>
-  </Wrapper>
+  <Menu>
+    <Item to="#" title="Footbal" hasSubmenu />
+    <Item to="#" title="Running" hasSubmenu />
+    <Item to="#" title="Basketball" hasSubmenu />
+  </Menu>
 );
-*/
