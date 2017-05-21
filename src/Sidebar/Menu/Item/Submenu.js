@@ -12,7 +12,7 @@ export const Submenu = styled(Wrapper)`
   overflow: hidden;
   max-height: ${props => (props.opened ? '200px' : '0')};
   ${media.tablet`
-    margin: ${props => (props.opened ? '-15px 0 50px' : '-15px 0 0 0')};
+    margin: ${props => (props.opened ? '-15px 0 50px' : '0')};
   `}
 `;
 
