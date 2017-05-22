@@ -6,7 +6,7 @@ const white = '#fff';
 
 export default styled(Link)`
   margin-bottom: 30px;
-  color: ${props => (props.opened || props.current ? white : gray)};
+  color: ${props => (props.isOpened || props.current ? white : gray)};
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -15,16 +15,16 @@ export default styled(Link)`
   justify-content: center;
 
   &:after {
-    display: ${props => (props.hasSubmenu ? 'block' : 'none')};
+    display: block;
     content: '';
     width: 6px;
     height: 6px;
     border: 5px solid;
-    border-color: ${props => (props.opened ? white : gray)};
+    border-color: ${props => (props.isOpened ? white : gray)};
     border-left: none;
     border-top: none;
     border-radius: 3px;
-    transform: ${props => (props.opened ? 'rotate(225deg)' : 'rotate(45deg)')};
+    transform: ${props => (props.isOpened ? 'rotate(225deg)' : 'rotate(45deg)')};
     margin-left: 12px;
     transition-duration: 0.2s;
   }
