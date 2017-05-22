@@ -19,8 +19,8 @@ class MainMenu extends Component {
   render() {
     return (
       <div>
-        <ToggleWrapper>
-          <Toggle opened={this.state.isOpened} onClick={this.handleClick} />
+        <ToggleWrapper onClick={this.handleClick}>
+          <Toggle opened={this.state.isOpened} />
         </ToggleWrapper>
         <Menu opened={this.state.isOpened}>
           <Item to="#" title="Footbal" hasSubmenu />

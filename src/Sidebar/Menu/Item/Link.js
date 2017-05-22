@@ -6,7 +6,6 @@ const gray = '#3c3c3c';
 const white = '#fff';
 
 export default styled(Link)`
-  margin-bottom: 30px;
   color: ${white};
   text-transform: uppercase;
   text-decoration: none;

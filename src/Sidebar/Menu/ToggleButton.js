@@ -4,9 +4,10 @@ import media from '../../styles/media';
 export const ToggleWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  height: 30px;
+  justify-content: center;
   ${media.tablet`
-    display: block;
+    display: none;
   `};
 `;
 
@@ -39,8 +40,4 @@ export const Toggle = styled.button`
     top: 12px;
     transform: ${props => (props.opened ? 'rotate(-90deg) translate(12px, 0px)' : 'none')};
   }
-
-  ${media.tablet`
-    display: none;
-  `};
 `;

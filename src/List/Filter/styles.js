@@ -11,6 +11,7 @@ export const Filter = styled.nav`
   border-bottom: 3px solid #e7e7e7;
   ${media.tablet`
     flex-flow: row nowrap;
+    align-items: center;
     padding: 11px 24px;
   `}
 `;

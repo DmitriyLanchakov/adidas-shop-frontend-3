@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Link from './Link';
 import { Submenu, SubLink } from './Submenu';
+
+const Wrapper = styled.div`
+  margin-bottom: 30px;
+`;
 
 
 class Menu extends Component {
@@ -18,7 +23,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <Link
           to={this.props.to}
           hasSubmenu={this.props.hasSubmenu}
@@ -33,7 +38,7 @@ class Menu extends Component {
           <SubLink to="#" title="Adidas Clothing">Clothing</SubLink>
           <SubLink to="#" title="Adidas Accesories">Accesories</SubLink>
         </Submenu>
-      </div>
+      </Wrapper>
     );
   }
 }
