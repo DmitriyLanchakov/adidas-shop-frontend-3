@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Link from './Link';
-import { Submenu, SubLink } from './Submenu';
+import Button from './Button';
+import { Submenu } from './Submenu';
 
 
 class Menu extends Component {
@@ -19,21 +19,11 @@ class Menu extends Component {
   render() {
     return (
       <div>
-        <Link
-          to={this.props.to}
-          hasSubmenu={this.props.hasSubmenu}
-          isOpened={this.state.isOpened}
-          onClick={this.handleClick}
-          title={this.props.title}
-        >
+        <Button isOpened={this.state.isOpened} onClick={this.handleClick}>
           {this.props.title}
-        </Link>
+        </Button>
         {this.state.isOpened &&
-        <Submenu>
-          <SubLink to="#" title="Adidas Shoes" className="current">Shoes</SubLink>
-          <SubLink to="#" title="Adidas Clothing">Clothing</SubLink>
-          <SubLink to="#" title="Adidas Accesories">Accesories</SubLink>
-        </Submenu>}
+        <Submenu>{this.props.children}</Submenu>}
       </div>
     );
   }

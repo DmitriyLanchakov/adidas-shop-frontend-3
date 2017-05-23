@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import media from '../../../styles/media';
 import Wrapper from '../Wrapper';
-import Link from './Link';
+
+const gray = '#3c3c3c';
+const white = '#fff';
 
 export const Submenu = styled(Wrapper)`
   ${media.tablet`
@@ -10,6 +13,15 @@ export const Submenu = styled(Wrapper)`
 `;
 
 export const SubLink = styled(Link)`
-  font-family: 'AndaleMono';
   margin-bottom: 25px;
+  font-family: 'AndaleMono';
+  display: block;
+  color: ${props => (props.current ? white : gray)};
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+
+  &:hover {
+    color: ${white};
+  }
 `;

@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const gray = '#3c3c3c';
 const white = '#fff';
 
-export default styled(Link)`
-  margin-bottom: 30px;
-  color: ${props => (props.isOpened || props.current ? white : gray)};
+export default styled.button`
+  margin: 0 auto 30px;
+  color: ${props => (props.isOpened ? white : gray)};
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 
   &:after {
     display: block;

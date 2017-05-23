@@ -6,7 +6,6 @@ export default styled.nav`
   ${media.tablet`
     display: block;
     text-align: center;
-    font-size: 24px;
     align-items: center;
     margin-top: 150px;
   `}
