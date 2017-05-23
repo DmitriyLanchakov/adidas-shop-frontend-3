@@ -13,6 +13,6 @@ const Image = styled.img`
 
 export default props => (
   <div>
-    <Image src={props.src} alt="Adidas Shoe Ultra Boost Full" />
+    <Image src={props.src} alt={props.title} />
   </div>
 );
