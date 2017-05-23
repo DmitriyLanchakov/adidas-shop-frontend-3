@@ -4,7 +4,7 @@ const gray = '#3c3c3c';
 const white = '#fff';
 
 export default styled.button`
-  margin: 0 auto 30px;
+  margin: 0 auto;
   color: ${props => (props.isOpened ? white : gray)};
   text-transform: uppercase;
   text-decoration: none;
