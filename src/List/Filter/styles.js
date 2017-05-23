@@ -5,11 +5,14 @@ import icon from './filter.png';
 export const Filter = styled.nav`
   display: flex;
   flex-flow: row wrap;
-  ${media.tablet`flex-flow: row nowrap`}
+  padding: 15px;
   align-content: flex-start;
   align-items: center;
-  padding: 11px 24px;
   border-bottom: 3px solid #e7e7e7;
+  ${media.tablet`
+    flex-flow: row nowrap;
+    padding: 11px 24px;
+  `}
 `;
 
 export const Icon = styled.span`
@@ -36,7 +39,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const HeadingLabel = styled.span`
+export const Label = styled.span`
   font-size: 24px;
   color: #d6d6d6;
   text-transform: uppercase;
