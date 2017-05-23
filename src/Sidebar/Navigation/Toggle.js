@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from '../../styles/media';
 
-export const ToggleWrapper = styled.div`
+export const Toggle = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 30px;
@@ -11,13 +11,13 @@ export const ToggleWrapper = styled.div`
   `};
 `;
 
-export const Toggle = styled.button`
+export const Button = styled.button`
   background: #fff;
   border: none;
   width: 50px;
   height: 4px;
   position: relative;
-  transform: ${props => (props.opened ? 'rotate(45deg)' : 'none')};
+  transform: ${props => (props.isOpened ? 'rotate(45deg)' : 'none')};
 
   &:before,
   &:after {
@@ -32,12 +32,12 @@ export const Toggle = styled.button`
   }
 
   &:before {
-    display: ${props => (props.opened ? 'none' : 'block')};
+    display: ${props => (props.isOpened ? 'none' : 'block')};
     bottom: 12px;
   }
 
   &:after {
     top: 12px;
-    transform: ${props => (props.opened ? 'rotate(-90deg) translate(12px, 0px)' : 'none')};
+    transform: ${props => (props.isOpened ? 'rotate(-90deg) translate(12px, 0px)' : 'none')};
   }
 `;
