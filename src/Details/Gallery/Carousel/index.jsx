@@ -13,10 +13,8 @@ const Captions = styled.div`
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 -5px;
   ${media.tablet`
     justify-content: center;
-    margin: 0 -7px;
   `}
 `;
 

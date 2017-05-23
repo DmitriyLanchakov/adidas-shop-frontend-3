@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import media from '../styles/media';
 import Logo from './Logo';
 import Search from './Search';
-import Menu from './Menu';
+import Navigation from './Navigation';
 
 const Sidebar = styled.aside`
   display: flex;
@@ -30,6 +30,6 @@ export default () => (
   <Sidebar>
     <Logo />
     <Search />
-    <Menu />
+    <Navigation />
   </Sidebar>
   );
