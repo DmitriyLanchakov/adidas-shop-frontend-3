@@ -13,7 +13,7 @@ const Save = styled.span`
     width: 75px;
     height: 75px;
     color: #fff;
-    background: #e3e3e3;
+    background: ${props => props.color};
     border-radius: 50%;
     cursor: pointer;
     position: relative;

@@ -62,7 +62,7 @@ export const Price = styled.h2`
   font-size: 80px;
   padding: 0;
   margin: 0;
-  color: #e2e2e2;
+  color: ${props => props.color};
   font-weight: 400;
   order: 1;
   ${media.tablet`
