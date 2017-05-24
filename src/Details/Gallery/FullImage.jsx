@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../../../styles/media';
-import imageSrc from './adidas-shoes-3@3x.jpg';
+import media from '../../styles/media';
 
 const Image = styled.img`
   display: block;
@@ -12,9 +11,8 @@ const Image = styled.img`
   `}
 `;
 
-export default () => (
+export default props => (
   <div>
-    <Image src={imageSrc} alt="Adidas Shoe Ultra Boost Full" />
-    <br />
+    <Image src={props.src} alt={props.title} />
   </div>
 );
