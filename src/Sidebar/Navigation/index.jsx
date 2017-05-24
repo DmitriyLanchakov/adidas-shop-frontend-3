@@ -8,7 +8,6 @@ import Toggle from './Toggle';
 const Nav = styled.nav`
   display: block;
   ${media.tablet`
-    display: block;
     text-align: center;
     align-items: center;
     margin-top: 150px;

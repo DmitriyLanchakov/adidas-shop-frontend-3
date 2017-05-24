@@ -43,8 +43,9 @@ const Button = styled.button`
   }
 `;
 
-export default () => (
-  <Toggle>
+
+export default props => (
+  <Toggle onClick={props.onClick}>
     <Button />
   </Toggle>
 );
