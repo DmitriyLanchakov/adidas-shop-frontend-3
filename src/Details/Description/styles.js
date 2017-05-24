@@ -9,7 +9,7 @@ export const Paragraph = styled.p`
   color: #d8d8d8;
   margin-bottom: 0;
   padding:0;
-  margin-top: 32px;
+  margin-top: 40px;
   ${media.tablet`
     font-size: 33px;
   `}
