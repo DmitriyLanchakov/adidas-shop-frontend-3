@@ -1,7 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 import media from '../../styles/media';
 
-export const Toggle = styled.div`
+const Toggle = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 30px;
@@ -11,10 +12,10 @@ export const Toggle = styled.div`
   `};
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   background: #fff;
   border: none;
-  width: 50px;
+  width: 40px;
   height: 4px;
   position: relative;
   transform: ${props => (props.isOpened ? 'rotate(45deg)' : 'none')};
@@ -22,7 +23,7 @@ export const Button = styled.button`
   &:before,
   &:after {
     content: '';
-    width: 50px;
+    width: 40px;
     height: 4px;
     display: block;
     background: #fff;
@@ -41,3 +42,9 @@ export const Button = styled.button`
     transform: ${props => (props.isOpened ? 'rotate(-90deg) translate(12px, 0px)' : 'none')};
   }
 `;
+
+export default () => (
+  <Toggle>
+    <Button />
+  </Toggle>
+);

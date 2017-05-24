@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import media from '../../styles/media';
 import Menu from './Menu';
 import Link from './Menu/Submenu/Link';
-import { Toggle, Button } from './Toggle';
+import Toggle from './Toggle';
 
 const Nav = styled.nav`
   display: block;
@@ -28,6 +28,11 @@ const Container = styled.div`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   ${media.tablet`
     display: block;
+    position: static;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
   `}
 `;
 
@@ -47,9 +52,7 @@ class Navigation extends Component {
   render() {
     return (
       <Nav>
-        <Toggle onClick={this.handleClick}>
-          <Button />
-        </Toggle>
+        <Toggle onClick={this.handleClick} />
         <Container isOpened={this.state.isOpened}>
           <Menu title="Footbal">
             <Link to="#" title="Adidas Shoes">Shoes</Link>
