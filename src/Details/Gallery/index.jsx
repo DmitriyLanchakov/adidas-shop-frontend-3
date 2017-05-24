@@ -18,19 +18,23 @@ const images = [
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    this.state = { index: 0 };
-    this.changeFullImage = this.changeFullImage.bind(this);
+    this.state = { selectedIndex: 0 };
+    this.handleChangeImage = this.handleChangeImage.bind(this);
   }
 
-  changeFullImage(index) {
-    this.setState({ index });
+  handleChangeImage(selectedIndex) {
+    this.setState({ selectedIndex });
   }
 
   render() {
     return (
       <div>
-        <FullImage src={images[this.state.index].src} />
-        <Carousel onChange={this.changeFullImage} images={images} active={this.state.index} />
+        <FullImage src={images[this.state.selectedIndex].src} />
+        <Carousel
+          onChange={this.handleChangeImage}
+          images={images}
+          active={this.state.selectedIndex}
+        />
       </div>
     );
   }
