@@ -11,11 +11,17 @@ const ColorPicker = styled.div`
   `}
 `;
 
-export default () => (
+const colors = [
+  '#c5c5c5',
+  '#4d87ca',
+  '#000',
+  '#e0e0e0',
+];
+
+export default props => (
   <ColorPicker>
-    <Button color="#c5c5c5" />
-    <Button color="#4d87ca" />
-    <Button color="#000" />
-    <Button color="#e0e0e0" />
+    {colors.map(color => (
+      <Button color={color} onClick={() => props.onChange(color)} />
+    ))}
   </ColorPicker>
-  );
+);

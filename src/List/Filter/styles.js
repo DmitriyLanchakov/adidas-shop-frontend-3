@@ -4,13 +4,14 @@ import icon from './filter.png';
 
 export const Filter = styled.nav`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   padding: 15px;
   align-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 3px solid #e7e7e7;
   ${media.tablet`
     flex-flow: row nowrap;
+    align-items: center;
     padding: 11px 24px;
   `}
 `;

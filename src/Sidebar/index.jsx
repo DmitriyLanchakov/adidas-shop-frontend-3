@@ -12,7 +12,11 @@ const Sidebar = styled.aside`
   justify-content: flex-start;
   align-content: center;
   background: #0e0e0e;
+  padding: 17px 15px;
+  justify-content: space-between;
+  align-items: center;
   ${media.tablet`
+    padding: 0;
     flex: 0 0 327px;
     justify-content: center;
     align-content: flex-start;

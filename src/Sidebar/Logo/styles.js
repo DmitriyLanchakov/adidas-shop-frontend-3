@@ -4,9 +4,8 @@ import media from '../../styles/media';
 
 export const LogoLink = styled(Link)`
   display: block;
-  margin: 6px;
   ${media.tablet`
-    margin: 30px;
+    margin: 50px 0 30px;
 
     &:hover {
       opacity: 0.8;
@@ -17,10 +16,8 @@ export const LogoLink = styled(Link)`
 export const Logo = styled.img`
   object-fit: contain;
   box-sizing: border-box;
-  padding: 10px;
-  width: 52px;
+  width: 45px;
   ${media.tablet`
-    padding: 10px;
-    width: 94px;
+    width: 80px;
   `}
 `;
