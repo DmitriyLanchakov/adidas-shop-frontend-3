@@ -26,19 +26,12 @@ const Main = styled.main`
   `}
 `;
 
-const Products = ({ match }) => (
-  <div>
-    <Route exact path={`${match.url}/:sport([^\\/-]+)?/:group([^\\/-]+)?`} component={List} />
-    <Route exact path={`${match.url}/:sport?/:group?/:id(.*[-]+.*)`} component={Details} />
-  </div>
-);
-
 const App = () => (
   <Router>
     <Main>
       <Route component={Sidebar} />
-      <Route exact path="/" component={List} />
-      <Route path="/products" component={Products} />
+      <Route exact path="/:sport?/:group?" component={List} />
+      <Route exact path="/:sport/:group/:id" component={Details} />
     </Main>
   </Router>
 );
