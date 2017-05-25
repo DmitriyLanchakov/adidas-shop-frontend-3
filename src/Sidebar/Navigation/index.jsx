@@ -51,7 +51,7 @@ class Navigation extends Component {
   render() {
     return (
       <Nav>
-        <Toggle onClick={this.handleClick} />
+        <Toggle onClick={this.handleClick} isOpened={this.state.isOpened} />
         <Container isOpened={this.state.isOpened}>
           <Menu title="Footbal">
             <Link to="#" title="Adidas Shoes">Shoes</Link>
