@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import media from '../../../styles/media';
 
-const gray = '#3c3c3c';
-const white = '#fff';
+const rotation = props => (props.isOpened ? 'rotate(225deg)' : 'rotate(45deg)');
 
 export default styled.button`
   margin: 0 auto;
-  color: ${props => (props.isOpened ? white : gray)};
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -14,8 +14,11 @@ export default styled.button`
   justify-content: center;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 42px;
   cursor: pointer;
+  ${media.tablet`
+    font-size: 24px;
+  `}
 
   &:after {
     display: block;
@@ -23,20 +26,24 @@ export default styled.button`
     width: 6px;
     height: 6px;
     border: 5px solid;
-    border-color: ${props => (props.isOpened ? white : gray)};
+    border-color: #fff;
     border-left: none;
     border-top: none;
     border-radius: 3px;
-    transform: ${props => (props.isOpened ? 'rotate(225deg)' : 'rotate(45deg)')};
+    transform: ${rotation};
     margin-left: 12px;
     transition-duration: 0.2s;
+    ${media.tablet`
+      font-size: 24px;
+    `}
   }
 
   &:hover:after {
-    border-color: ${white};
+    border-color: #fff;
+    transform: translateX(5px) ${rotation};
   }
 
   &:hover {
-    color: ${white};
+    color: #fff;
   }
 `;
