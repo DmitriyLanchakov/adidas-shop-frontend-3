@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/no-children */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -26,12 +27,19 @@ const Main = styled.main`
   `}
 `;
 
+const Products = ({ match }) => (
+  <div>
+    <Route exact path={`${match.url}/:sport([^\\/-]+)?/:group([^\\/-]+)?`} component={List} />
+    <Route exact path={`${match.url}/:sport?/:group?/:id(.*[-]+.*)`} component={Details} />
+  </div>
+);
+
 const App = () => (
   <Router>
     <Main>
-      <Sidebar />
+      <Route component={Sidebar} />
       <Route exact path="/" component={List} />
-      <Route path="/item" component={Details} />
+      <Route path="/products" component={Products} />
     </Main>
   </Router>
 );
