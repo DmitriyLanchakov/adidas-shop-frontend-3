@@ -2,17 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../../styles/media';
 
-const Toggle = styled.div`
+const Button = styled.button`
   display: flex;
   flex-flow: column nowrap;
   height: 30px;
   justify-content: center;
+  background: none;
+  border: none;
   ${media.tablet`
     display: none;
   `};
 `;
 
-const Button = styled.button`
+const Span = styled.span`
+  display: block;
   background: #fff;
   border: none;
   width: 40px;
@@ -45,7 +48,7 @@ const Button = styled.button`
 
 
 export default props => (
-  <Toggle>
-    <Button onClick={props.onClick} isOpened={props.isOpened} />
-  </Toggle>
+  <Button onClick={props.onClick}>
+    <Span isOpened={props.isOpened} />
+  </Button>
 );
