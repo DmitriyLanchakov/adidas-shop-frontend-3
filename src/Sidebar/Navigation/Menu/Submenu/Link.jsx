@@ -1,11 +1,12 @@
+import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import media from '../../../../styles/media';
 
 const gray = '#3c3c3c';
 const white = '#fff';
 
-export default styled(Link)`
+const Link = styled(NavLink)`
   font-family: 'AndaleMono';
   display: block;
   color: ${white};
@@ -15,10 +16,22 @@ export default styled(Link)`
   margin-bottom: 25px;
   ${media.tablet`
     font-size: 24px;
-    color: ${props => (props.current ? white : gray)};
+    color: ${gray};
   `}
 
   &:hover {
     color: ${white};
   }
 `;
+
+export default props => (
+  <Link
+    to={props.to}
+    title={props.title}
+    activeStyle={{
+      color: white,
+    }}
+  >
+    {props.children}
+  </Link>
+);

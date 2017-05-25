@@ -33,7 +33,7 @@ export default ({ match }) => (
               image={card.image}
               price={card.price}
               sale={card.sale}
-              match={match}
+              url={match.url}
               id={card.id}
             />
           </Col>
