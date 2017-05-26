@@ -55,7 +55,7 @@ class Navigation extends Component {
         <Container isOpened={this.state.isOpened}>
           <Menu title="Football">
             <Link to="/products/football/shoes" title="Adidas Shoes">Shoes</Link>
-            <Link to="/products/products/football/clothing" title="Adidas Clothing">Clothing</Link>
+            <Link to="/products/football/clothing" title="Adidas Clothing">Clothing</Link>
             <Link to="/products/football/accessories" title="Adidas Accesories">Accesories</Link>
           </Menu>
           <Menu title="Running">
