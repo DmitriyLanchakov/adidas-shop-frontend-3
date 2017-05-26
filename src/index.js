@@ -26,24 +26,17 @@ const Main = styled.main`
   `}
 `;
 
-const Products = () => (
-  <div>
-    <Route exact path="/" component={List} />
-    <Redirect to="/products/football/shoes" />
-    <Route exact path="/products/:sport/:group/" component={List} />
-    <Route exact path="/products/:sport/:group/:id" component={Details} />
-  </div>
-);
-
-
 const App = () => (
   <Router>
     <Main>
       <Sidebar />
-      <Route path="/" component={Products} />
+      <Redirect from="/" to="/products/football/shoes" />
+      <Route exact path="/products/:sport/:group/" component={List} />
+      <Route path="/products/:sport/:group/:id" component={Details} />
     </Main>
   </Router>
 );
+
 ReactDOM.render(
   <App />,
   document.getElementById('root'),
