@@ -30,9 +30,9 @@ const App = () => (
   <Router>
     <Main>
       <Sidebar />
-      <Redirect from="/" to="/products/football/shoes" />
       <Route exact path="/products/:sport/:group/" component={List} />
       <Route path="/products/:sport/:group/:id" component={Details} />
+      <Redirect from="/" to="/products/football/shoes" />
     </Main>
   </Router>
 );
