@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route, Redirect,
+  Route, Redirect, Switch,
 } from 'react-router-dom';
 import styled from 'styled-components';
 import media from './styles/media';
@@ -30,9 +30,11 @@ const App = () => (
   <Router>
     <Main>
       <Sidebar />
-      <Route exact path="/products/:sport/:group/" component={List} />
-      <Route path="/products/:sport/:group/:id" component={Details} />
-      <Redirect from="/" to="/products/football/shoes" />
+      <Switch>
+        <Route exact path="/products/:sport/:group/" component={List} />
+        <Route path="/products/:sport/:group/:id" component={Details} />
+        <Redirect from="/" to="/products/football/shoes" />
+      </Switch>
     </Main>
   </Router>
 );

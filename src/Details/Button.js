@@ -12,8 +12,10 @@ const Button = styled.button`
   background-image: linear-gradient(to right, #4949aa, #27275d);
   transition: none;
   position: fixed;
-  bottom: 0;
+  bottom: 0 !important;
   right: 0;
+  margin: 0;
+  transform: translate3d(0, 0, 0);
   ${media.tablet`
     width: calc(100% - 327px);
     font-size: 32px;
