@@ -6,8 +6,12 @@ import Link from './Menu/Submenu/Link';
 import Toggle from './Toggle';
 
 const Nav = styled.nav`
-  display: block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   ${media.tablet`
+    display: block;
     text-align: center;
     align-items: center;
     margin-top: 150px;
