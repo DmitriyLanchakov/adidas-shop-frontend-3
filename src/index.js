@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route,
+  Route, Redirect,
 } from 'react-router-dom';
 import styled from 'styled-components';
 import media from './styles/media';
@@ -29,7 +29,8 @@ const Main = styled.main`
 const Products = () => (
   <div>
     <Route exact path="/" component={List} />
-    <Route exact path="/products/:sport?/:group?/" component={List} />
+    <Redirect to="/products/football/shoes" />
+    <Route exact path="/products/:sport/:group/" component={List} />
     <Route exact path="/products/:sport/:group/:id" component={Details} />
   </div>
 );
