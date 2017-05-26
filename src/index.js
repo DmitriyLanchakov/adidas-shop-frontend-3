@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route,
+  Route, Redirect,
 } from 'react-router-dom';
 import styled from 'styled-components';
 import media from './styles/media';
@@ -30,11 +30,13 @@ const App = () => (
   <Router>
     <Main>
       <Sidebar />
-      <Route exact path="/" component={List} />
-      <Route path="/item" component={Details} />
+      <Route exact path="/products/:sport/:group/" component={List} />
+      <Route path="/products/:sport/:group/:id" component={Details} />
+      <Redirect from="/" to="/products/football/shoes" />
     </Main>
   </Router>
 );
+
 ReactDOM.render(
   <App />,
   document.getElementById('root'),
