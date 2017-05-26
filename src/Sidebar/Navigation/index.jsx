@@ -54,19 +54,19 @@ class Navigation extends Component {
         <Toggle onClick={this.handleClick} isOpened={this.state.isOpened} />
         <Container isOpened={this.state.isOpened}>
           <Menu title="Footbal">
-            <Link to="/football/shoes" title="Adidas Shoes">Shoes</Link>
-            <Link to="/football/clothing" title="Adidas Clothing">Clothing</Link>
-            <Link to="/football/accessories" title="Adidas Accesories">Accesories</Link>
+            <Link to="/products/football/shoes" title="Adidas Shoes">Shoes</Link>
+            <Link to="/products/products/football/clothing" title="Adidas Clothing">Clothing</Link>
+            <Link to="/products/football/accessories" title="Adidas Accesories">Accesories</Link>
           </Menu>
           <Menu title="Running">
-            <Link to="/running/shoes" title="Adidas Shoes">Shoes</Link>
-            <Link to="/running/clothing" title="Adidas Clothing">Clothing</Link>
-            <Link to="/running/accessories" title="Adidas Accesories">Accesories</Link>
+            <Link to="/products/running/shoes" title="Adidas Shoes">Shoes</Link>
+            <Link to="/products/running/clothing" title="Adidas Clothing">Clothing</Link>
+            <Link to="/products/running/accessories" title="Adidas Accesories">Accesories</Link>
           </Menu>
           <Menu title="Basketball">
-            <Link to="/basketball/shoes" title="Adidas Shoes">Shoes</Link>
-            <Link to="/basketball/clothing" title="Adidas Clothing">Clothing</Link>
-            <Link to="/basketball/accessories" title="Adidas Accesories">Accesories</Link>
+            <Link to="/products/basketball/shoes" title="Adidas Shoes">Shoes</Link>
+            <Link to="/products/basketball/clothing" title="Adidas Clothing">Clothing</Link>
+            <Link to="/products/basketball/accessories" title="Adidas Accesories">Accesories</Link>
           </Menu>
         </Container>
       </Nav>

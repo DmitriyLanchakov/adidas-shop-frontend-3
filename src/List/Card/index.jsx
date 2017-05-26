@@ -6,7 +6,7 @@ export default props => (
   <Wrapper>
     <Container>
       <Image src={props.image} alt="Adidas Shoes 1" />
-      <Link to={`${props.url}/${props.id}`} title="Single item page" sale={props.sale}>${props.price}</Link>
+      <Link to={`/${props.url === '/' ? 'products' : props.url}/${props.id}`} title="Single item page" sale={props.sale}>${props.price}</Link>
       {props.sale && <SaleLabel className="sale">Sale</SaleLabel>}
     </Container>
   </Wrapper>
