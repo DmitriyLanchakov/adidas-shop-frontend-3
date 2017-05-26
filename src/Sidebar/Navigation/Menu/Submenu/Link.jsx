@@ -19,7 +19,8 @@ const Link = styled(NavLink)`
     color: ${gray};
   `}
 
-  &:hover {
+  &:hover,
+  &.active {
     color: ${white};
   }
 `;
@@ -28,9 +29,7 @@ export default props => (
   <Link
     to={props.to}
     title={props.title}
-    activeStyle={{
-      color: white,
-    }}
+    activeClassName="active"
   >
     {props.children}
   </Link>
