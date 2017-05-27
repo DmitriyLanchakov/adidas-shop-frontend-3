@@ -4,8 +4,8 @@ import media from '../../../styles/media';
 const Button = styled.button`
   border: none;
   background: ${props => props.color || '#fff'};
-  width: 4vw;
-  height: 4vw;
+  width: 4.5vw;
+  height: 4.5vw;
   max-width: 25px;
   max-height: 25px;
   border-radius: 50%;
