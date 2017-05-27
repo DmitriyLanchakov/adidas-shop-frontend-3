@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import media from '../../styles/media';
 
 const Button = styled.button`
-  display: flex;
-  flex-flow: column nowrap;
-  height: 30px;
-  justify-content: center;
   background: none;
   border: none;
+  height: 30px;
   ${media.tablet`
     display: none;
   `};

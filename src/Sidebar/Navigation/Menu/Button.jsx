@@ -10,21 +10,30 @@ const Wrapper = styled.span`
   align-items: center;
   align-content: center;
   justify-content: center;
+  max-width: 100%;
   &:hover span {
     transform: translateX(5px) ${rotation};
   }
+  ${media.tablet`
+    max-width: auto;
+  `};
 `;
 
 const Button = styled.button`
+  display: inline;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   background: none;
   border: none;
-  font-size: 42px;
+  font-size: 9vw;
   cursor: pointer;
+  width: auto;
+  margin: 0;
+  padding: 0;
   ${media.tablet`
     font-size: 24px;
+    max-width: auto;
   `}
 `;
 const Arrow = styled.span`
@@ -36,9 +45,9 @@ const Arrow = styled.span`
   border-color: #fff;
   border-left: none;
   border-top: none;
-  border-radius: 3px;
+  border-radius: 30%;
   transform: ${rotation};
-  margin-left: 5px;
+  margin-left: 12px;
   transition-duration: 0.2s;
   ${media.tablet`
     font-size: 24px;

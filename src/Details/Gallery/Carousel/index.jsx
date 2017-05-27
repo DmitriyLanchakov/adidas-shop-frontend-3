@@ -6,7 +6,7 @@ import SingleImage from './SingleImage';
 const Captions = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   ${media.tablet`
     justify-content: center;

@@ -23,7 +23,8 @@ export const TitleWrap = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 36px;
+  font-size: 9vw;
+  font-weight: 400;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -51,7 +52,9 @@ export const Options = styled.div`
   align-items: center;
   order: 2;
   width: 100%;
+  margin-top: 15px;
   ${media.tablet`
+    margin: 0;
     order: 1;
     justify-content: flex-end;
     width: auto;
@@ -59,13 +62,14 @@ export const Options = styled.div`
 `;
 
 export const Price = styled.h2`
-  font-size: 80px;
+  font-size: 19vw;
   padding: 0;
   margin: 0;
   color: ${props => props.color};
   font-weight: 400;
   order: 1;
   ${media.tablet`
+    font-size: 80px;
     padding: 10px 0;
     margin: 20px 0;
     order: 2;

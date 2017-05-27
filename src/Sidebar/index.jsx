@@ -9,7 +9,6 @@ const Sidebar = styled.aside`
   display: flex;
   flex-flow: row wrap;
   flex: 1;
-  justify-content: flex-start;
   align-content: center;
   background: #0e0e0e;
   padding: 17px 15px;

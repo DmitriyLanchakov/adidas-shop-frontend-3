@@ -12,7 +12,7 @@ const Link = styled(NavLink)`
   color: ${white};
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 42px;
+  font-size: 9vw;
   margin-bottom: 25px;
   ${media.tablet`
     font-size: 24px;

@@ -12,6 +12,8 @@ const Label = styled.span`
   font-size: 14px;
   color: #fff;
   ${media.tablet`
+    font-size: 14px;
+    padding: 7px 20px;
     margin-left: 30px;
     order: 2;
   `}
