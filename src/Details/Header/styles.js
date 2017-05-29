@@ -28,8 +28,10 @@ export const Title = styled.h1`
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  max-width: 100%;
   ${media.tablet`
     font-size: 64px;
+    max-width: 50px;
   `}
 `;
 
