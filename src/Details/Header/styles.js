@@ -29,6 +29,7 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   ${media.tablet`
+    max-width: 50px;
     font-size: 64px;
   `}
 `;
@@ -73,12 +74,5 @@ export const Price = styled.h2`
     padding: 10px 0;
     margin: 20px 0;
     order: 2;
-  `}
-`;
-
-export const Break = styled.br`
-  display: none;
-  ${media.tablet`
-    display: inline;
   `}
 `;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, TitleWrap, Title, Additional, Options, Price, Break } from './styles';
+import { Header, TitleWrap, Title, Additional, Options, Price } from './styles';
 import SaveButton from './SaveButton';
 import SaleLabel from '../../Components/SaleLabel';
 import ColorPicker from './ColorPicker';
@@ -19,7 +19,7 @@ class ProductHeader extends Component {
     return (
       <Header>
         <TitleWrap>
-          <Title>Ultra <Break />Boost</Title>
+          <Title>{this.props.title}</Title>
           <SaveButton color={this.state.color}>Save</SaveButton>
         </TitleWrap>
 
@@ -28,7 +28,7 @@ class ProductHeader extends Component {
             <ColorPicker onChange={this.handleChangeColor} />
             <SaleLabel static>Sale</SaleLabel>
           </Options>
-          <Price color={this.state.color}>170$</Price>
+          <Price color={this.state.color}>${this.props.price / 100}</Price>
         </Additional>
       </Header>
     );

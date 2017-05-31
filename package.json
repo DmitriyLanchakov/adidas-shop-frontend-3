@@ -31,5 +31,6 @@
   "now": {
     "name": "build",
     "alias": "adidas-kirkorov"
-  }
+  },
+  "proxy": "https://erodionov-adidas-fake-api.now.sh"
 }
