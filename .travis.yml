@@ -11,5 +11,5 @@ deploy:
   script:
   - npm run build && now --token=$LOGIN_TOKEN -p build && now --token=$LOGIN_TOKEN ln
   on:
-    branch: master
+    branch: feat/travis
   skip_cleanup: true
