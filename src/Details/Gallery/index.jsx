@@ -18,15 +18,15 @@ class Gallery extends Component {
   }
 
   render() {
-    const { id, fileName } = this.props.images[this.state.selectedIndex];
     return (
       <div>
-        <FullImage src={getImage(id, fileName, 1024)} />
-        <Carousel
-          onChange={this.handleChangeImage}
-          images={this.props.images}
-          active={this.state.selectedIndex}
-        />
+        {this.props.image &&
+          <FullImage
+            src={getImage(this.props.image[this.state.selectedIndex].id,
+              this.props.image[this.state.selectedIndex].fileName, 1024)}
+          />
+        }
+        <Carousel images={this.props.images} />
       </div>
     );
   }

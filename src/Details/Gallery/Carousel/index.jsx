@@ -18,9 +18,8 @@ export default props => (
     {props.images.map((image, index) => (
       <SingleImage
         src={image.src}
-        alt={image.title}
         isActive={index === props.active}
-        key={image.title.toString()}
+        key={image.id}
         onClick={() => props.onChange(index)}
       />
     ))}

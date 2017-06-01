@@ -33,11 +33,12 @@ class Details extends Component {
       <Wrapper>
         <Product>
           <Header title={product.title} price={product.price} />
-          <Gallery images={this.state.product.images} />
+          {this.state.product.images &&
+            <Gallery images={this.state.product.images} />
+          }
           <Description>{product.description}</Description>
         </Product>
         <Button>Buy now</Button>
-        {JSON.stringify(product.images)}
       </Wrapper>
     );
   }
