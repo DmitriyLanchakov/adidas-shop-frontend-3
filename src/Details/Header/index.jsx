@@ -19,7 +19,7 @@ class ProductHeader extends Component {
     return (
       <Header>
         <TitleWrap>
-          <Title>Ultra Boost</Title>
+          <Title>{this.props.title}</Title>
           <SaveButton color={this.state.color}>Save</SaveButton>
         </TitleWrap>
 
@@ -28,7 +28,7 @@ class ProductHeader extends Component {
             <ColorPicker onChange={this.handleChangeColor} />
             <SaleLabel static>Sale</SaleLabel>
           </Options>
-          <Price color={this.state.color}>170$</Price>
+          <Price color={this.state.color}>${this.props.price / 100}</Price>
         </Additional>
       </Header>
     );

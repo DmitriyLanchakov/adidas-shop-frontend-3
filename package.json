@@ -27,5 +27,10 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint"
-  }
+  },
+  "now": {
+    "name": "build",
+    "alias": "adidas-kirkorov"
+  },
+  "proxy": "https://erodionov-adidas-fake-api.now.sh"
 }

@@ -2,18 +2,9 @@ import React, { Component } from 'react';
 import FullImage from './FullImage';
 import Carousel from './Carousel';
 
-import caption1 from './img/adidas-shoes-3_caption1.png';
-import caption2 from './img/adidas-shoes-3_caption2.png';
-import caption3 from './img/adidas-shoes-3_caption3.png';
-import caption4 from './img/adidas-shoes-3.png';
-
-const images = [
-  { src: caption1, title: 'Adidas Shoes Ultra Boost caption1' },
-  { src: caption2, title: 'Adidas Shoes Ultra Boost caption2' },
-  { src: caption3, title: 'Adidas Shoes Ultra Boost caption3' },
-  { src: caption4, title: 'Adidas Shoes Ultra Boost caption4' },
-  { src: caption2, title: 'Adidas Shoes Ultra Boost caption5' },
-];
+const getImage = (id, fileName, height) => (
+   `http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${id}/zoom/${fileName}?sh=${height}`
+);
 
 class Gallery extends Component {
   constructor(props) {
@@ -27,12 +18,13 @@ class Gallery extends Component {
   }
 
   render() {
+    const { id, fileName } = this.props.images[this.state.selectedIndex];
     return (
       <div>
-        <FullImage src={images[this.state.selectedIndex].src} />
+        <FullImage src={getImage(id, fileName, 1024)} />
         <Carousel
           onChange={this.handleChangeImage}
-          images={images}
+          images={this.props.images}
           active={this.state.selectedIndex}
         />
       </div>
