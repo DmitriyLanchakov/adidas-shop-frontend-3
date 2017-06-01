@@ -10,7 +10,7 @@ script:
 deploy:
   provider: script
   script:
-  - npm run build && now --token=$LOGIN_TOKEN -p ./build && now --token=$LOGIN_TOKEN ln
+  - npm deploy
   on:
     branch: feat/travis
   skip_cleanup: true
