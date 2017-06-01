@@ -3,13 +3,14 @@ node_js:
   - "node"
 install:
   - npm install
+before_script:
   - npm install now
 script:
   - npm run lint
 deploy:
   provider: script
   script:
-  - npm run build && now --token=$LOGIN_TOKEN -p build && now --token=$LOGIN_TOKEN ln
+  - npm run build && now --token=$LOGIN_TOKEN -p ./build && now --token=$LOGIN_TOKEN ln
   on:
     branch: feat/travis
   skip_cleanup: true
