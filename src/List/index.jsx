@@ -5,10 +5,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import { Catalog, Heading, StyledGrid as Grid } from './styles';
 import Card from './Card';
 import Filter from './Filter';
-
-const getImage = (id, fileName, height) => (
-   `http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${id}/zoom/${fileName}?sh=${height}`
-);
+import getImage from '../functions/getImage';
 
 class List extends Component {
   constructor(props) {

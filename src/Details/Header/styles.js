@@ -11,7 +11,7 @@ export const Header = styled.header`
   max-height: 100%;
   ${media.tablet`
     flex-flow: row nowrap;
-    max-height: 40px;
+    max-height: 200px;
   `}
 `;
 
@@ -30,9 +30,8 @@ export const Title = styled.h1`
   margin: 0;
   max-width: 100%;
   ${media.tablet`
-    max-width: 50px;
+    max-width: 500px;
     font-size: 64px;
-    max-width: 50px;
   `}
 `;
 

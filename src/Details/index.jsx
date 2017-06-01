@@ -28,16 +28,15 @@ class Details extends Component {
   }
 
   render() {
-    const product = this.state.product;
     return (
       <Wrapper>
-        <Product>
-          <Header title={product.title} price={product.price} />
-          {this.state.product.images &&
+        {this.state.product.images &&
+          <Product>
+            <Header title={this.state.product.title} price={this.state.product.price} />
             <Gallery images={this.state.product.images} />
-          }
-          <Description>{product.description}</Description>
-        </Product>
+            <Description>{this.state.product.description}</Description>
+          </Product>
+        }
         <Button>Buy now</Button>
       </Wrapper>
     );

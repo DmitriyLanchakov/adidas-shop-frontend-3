@@ -5,9 +5,10 @@ import media from '../../styles/media';
 const Image = styled.img`
   display: block;
   width: 100%;
-  margin: 0 auto 35px;
+  margin: 35px auto 35px;
   ${media.tablet`
     width: 80%;
+    margin: 0 auto 35px;
   `}
 `;
 

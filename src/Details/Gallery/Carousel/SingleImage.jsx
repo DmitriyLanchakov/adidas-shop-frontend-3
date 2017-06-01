@@ -6,9 +6,9 @@ const Image = styled.img`
   box-sizing: border-box;
   outline: ${props => (props.isActive ? '5px solid #e8e8ea' : '5px solid #fff')};
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 5px 10px;
   ${media.tablet`
-    margin: 0 7px;
+    margin: 0 7px 15px;
   `}
 
   &:hover {
