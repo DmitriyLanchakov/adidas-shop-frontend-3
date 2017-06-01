@@ -10,7 +10,7 @@ script:
 deploy:
   provider: script
   script:
-  - npm deploy
+  - npm run deploy
   on:
     branch: feat/travis
   skip_cleanup: true
