@@ -30,7 +30,7 @@ class Details extends Component {
   render() {
     return (
       <Wrapper>
-        {this.state.product.images &&
+        {Object.keys(this.state.product).length > 0 &&
           <Product>
             <Header title={this.state.product.title} price={this.state.product.price} />
             <Gallery images={this.state.product.images} />
