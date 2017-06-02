@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../../../styles/media';
 import SingleImage from './SingleImage';
-import getImage from '../../../functions/getImage';
+import getImageLink from '../../../functions/getImageLink';
 
 const Captions = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export default props => (
   <Captions>
     {props.images.map((image, index) => (
       <SingleImage
-        src={getImage(image.id, image.fileName, 128)}
+        src={getImageLink(image.id, image.fileName, 128)}
         isActive={index === props.active}
         key={image.id}
         onClick={() => props.onChange(index)}

@@ -5,7 +5,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import { Catalog, Heading, StyledGrid as Grid } from './styles';
 import Card from './Card';
 import Filter from './Filter';
-import getImage from '../functions/getImage';
+import getImageLink from '../functions/getImageLink';
 
 class List extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class List extends Component {
               <Col xs={12} sm={6} md={4} key={product.id}>
                 <Card
                   to={`${this.props.match.url}/${product.id}`}
-                  image={getImage(product.images[0].id, product.images[0].fileName, 256)}
+                  image={getImageLink(product.images[0].id, product.images[0].fileName, 256)}
                   price={product.price}
                 />
               </Col>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FullImage from './FullImage';
 import Carousel from './Carousel';
-import getImage from '../../functions/getImage';
+import getImageLink from '../../functions/getImageLink';
 
 class Gallery extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Gallery extends Component {
     return (
       <div>
         <FullImage
-          src={getImage(this.props.images[this.state.selectedIndex].id,
+          src={getImageLink(this.props.images[this.state.selectedIndex].id,
             this.props.images[this.state.selectedIndex].fileName, 1024)}
         />
         <Carousel
