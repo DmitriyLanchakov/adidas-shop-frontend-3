@@ -6,7 +6,7 @@ export const Catalog = styled.main`
   flex: 1;
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   display: none;
 `;
 

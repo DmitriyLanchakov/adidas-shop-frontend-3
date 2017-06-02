@@ -30,9 +30,10 @@ class List extends Component {
   }
 
   render() {
+    const { sport, group } = this.props.match.params;
     return (
       <Catalog>
-        <Heading>Items Catalog</Heading>
+        <Heading>{`Adidas ${sport} ${group} catalog`}</Heading>
         <Filter />
         <Grid fluid>
           <Row>

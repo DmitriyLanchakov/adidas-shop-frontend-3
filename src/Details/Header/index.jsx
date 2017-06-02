@@ -3,6 +3,7 @@ import { Header, TitleWrap, Title, Additional, Options, Price } from './styles';
 import SaveButton from './SaveButton';
 import SaleLabel from '../../Components/SaleLabel';
 import ColorPicker from './ColorPicker';
+import getFormatedPrice from '../../functions/getFormatedPrice';
 
 class ProductHeader extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class ProductHeader extends Component {
             <ColorPicker onChange={this.handleChangeColor} />
             <SaleLabel static>Sale</SaleLabel>
           </Options>
-          <Price color={this.state.color}>${(this.props.price / 100).toFixed(2)}</Price>
+          <Price color={this.state.color}>{getFormatedPrice(this.props.price)}</Price>
         </Additional>
       </Header>
     );

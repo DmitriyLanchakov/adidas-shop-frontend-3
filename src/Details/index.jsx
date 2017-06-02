@@ -30,13 +30,11 @@ class Details extends Component {
   render() {
     return (
       <Wrapper>
-        {Object.keys(this.state.product).length > 0 &&
-          <Product>
-            <Header title={this.state.product.title} price={this.state.product.price} />
-            <Gallery images={this.state.product.images} />
-            <Description>{this.state.product.description}</Description>
-          </Product>
-        }
+        <Product>
+          <Header title={this.state.product.title} price={this.state.product.price} />
+          <Gallery images={this.state.product.images} />
+          <Description>{this.state.product.description}</Description>
+        </Product>
         <Button>Buy now</Button>
       </Wrapper>
     );
