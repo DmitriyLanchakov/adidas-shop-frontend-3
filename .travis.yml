@@ -12,5 +12,5 @@ deploy:
   script:
   - npm run deploy
   on:
-    branch: feat/travis
+    branch: master
   skip_cleanup: true

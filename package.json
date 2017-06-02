@@ -30,6 +30,6 @@
     "deploy": "now --token=$LOGIN_TOKEN -p && now --token=$LOGIN_TOKEN ln"
   },
   "now": {
-    "alias": "babkin-adidas-shop"
+    "alias": "ababkin-adidas-shop"
   }
 }
