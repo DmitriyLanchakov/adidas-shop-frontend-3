@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper, Container, StyledLink as Link, Image } from './styles';
 import SaleLabel from '../../Components/SaleLabel';
-import getFormatedPrice from '../../functions/getFormatedPrice';
+import getFormattedPrice from '../../functions/getFormattedPrice';
 
 export default props => (
   <Wrapper>
@@ -12,7 +12,7 @@ export default props => (
         title="Single item page"
         sale={props.sale}
       >
-        {getFormatedPrice(props.price)}
+        {getFormattedPrice(props.price)}
       </Link>
       {props.sale && <SaleLabel className="sale">Sale</SaleLabel>}
     </Container>

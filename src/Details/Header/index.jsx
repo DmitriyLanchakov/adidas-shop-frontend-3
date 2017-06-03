@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Header, TitleWrap, Title, Additional, Options, Price } from './styles';
+import { Header, TitleWrap, Title, Additional, Options } from './styles';
+import Price from './Price';
 import SaveButton from './SaveButton';
 import SaleLabel from '../../Components/SaleLabel';
 import ColorPicker from './ColorPicker';
-import getFormatedPrice from '../../functions/getFormatedPrice';
 
 class ProductHeader extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class ProductHeader extends Component {
             <ColorPicker onChange={this.handleChangeColor} />
             <SaleLabel static>Sale</SaleLabel>
           </Options>
-          <Price color={this.state.color}>{getFormatedPrice(this.props.price)}</Price>
+          <Price color={this.state.color}>{this.props.price}</Price>
         </Additional>
       </Header>
     );
