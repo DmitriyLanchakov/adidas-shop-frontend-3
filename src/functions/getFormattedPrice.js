@@ -1,3 +1,3 @@
-export default price => (
-  price !== undefined ? `$${(price / 1000).toFixed(2)}` : '$0.00'
+export default (price, currency) => (
+  price !== undefined ? `${currency}${(price / 1000).toFixed(2)}` : '$0.00'
 );

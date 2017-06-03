@@ -1,5 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 import media from '../../../styles/media';
+import getImageLink from '../../../functions/getImageLink';
 
 const Image = styled.img`
   width: 16%;
@@ -16,4 +18,10 @@ const Image = styled.img`
   }
 `;
 
-export default Image;
+export default props => (
+  <Image
+    src={getImageLink(props.id, props.fileName, props.size)}
+    isActive={props.isActive}
+    onClick={props.onClick}
+  />
+);

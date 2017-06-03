@@ -19,5 +19,5 @@ const Price = styled.h2`
 `;
 
 export default props => (
-  <Price color={props.color}>{getFormattedPrice(props.children)}</Price>
+  <Price color={props.color}>{getFormattedPrice(props.children, props.currency)}</Price>
 );

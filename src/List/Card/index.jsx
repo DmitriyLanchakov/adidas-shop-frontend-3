@@ -12,7 +12,7 @@ export default props => (
         title="Single item page"
         sale={props.sale}
       >
-        {getFormattedPrice(props.price)}
+        {getFormattedPrice(props.price, '$')}
       </Link>
       {props.sale && <SaleLabel className="sale">Sale</SaleLabel>}
     </Container>
