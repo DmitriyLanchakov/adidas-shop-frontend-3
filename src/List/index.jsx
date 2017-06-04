@@ -24,7 +24,7 @@ class List extends Component {
 
   fetchData(props) {
     const { sport, group } = props.match.params;
-    fetch(`/v1/products/${sport}/${group}`)
+    fetch(`https://erodionov-adidas-fake-api.now.sh/v1/products/${sport}/${group}`)
       .then(response => response.json())
       .then(json => this.setState({ products: json.items }));
   }

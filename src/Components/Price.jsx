@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../../styles/media';
-import getFormattedPrice from '../../functions/getFormattedPrice';
+import media from '../styles/media';
 
 const Price = styled.h2`
   font-size: 19vw;
@@ -19,5 +18,5 @@ const Price = styled.h2`
 `;
 
 export default props => (
-  <Price color={props.color}>{getFormattedPrice(props.children, props.currency)}</Price>
+  <Price color={props.color}>{props.price !== undefined ? `$${(props.price / 1000).toFixed(2)}` : '$0.00'}</Price>
 );

@@ -29,7 +29,6 @@
     "prepush": "npm run lint",
     "deploy": "now --token=$LOGIN_TOKEN -p && now --token=$LOGIN_TOKEN ln"
   },
-  "proxy": "https://erodionov-adidas-fake-api.now.sh",
   "now": {
     "alias": "ababkin-adidas-shop"
   }

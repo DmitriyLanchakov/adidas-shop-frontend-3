@@ -22,7 +22,7 @@ class Details extends Component {
 
   fetchData(props) {
     const { sport, group, id } = props.match.params;
-    fetch(`/v1/products/${sport}/${group}/${id}`)
+    fetch(`https://erodionov-adidas-fake-api.now.sh/v1/products/${sport}/${group}/${id}`)
       .then(response => response.json())
       .then(product => this.setState({ product }));
   }
