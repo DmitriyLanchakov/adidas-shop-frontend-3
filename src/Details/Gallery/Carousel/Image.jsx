@@ -18,10 +18,10 @@ const Image = styled.img`
   }
 `;
 
-export default props => (
+export default ({ id, fileName, size, isActive, onClick }) => (
   <Image
-    src={getImageLink(props.id, props.fileName, props.size)}
-    isActive={props.isActive}
-    onClick={props.onClick}
+    src={getImageLink(id, fileName, size)}
+    isActive={isActive}
+    onClick={onClick}
   />
 );

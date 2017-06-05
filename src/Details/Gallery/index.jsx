@@ -15,21 +15,18 @@ class Gallery extends Component {
   }
 
   render() {
+    if (!this.props.images) return false;
     return (
       <div>
-        {this.props.images &&
-          <div>
-            <FullImage
-              src={getImageLink(this.props.images[this.state.selectedIndex].id,
-                this.props.images[this.state.selectedIndex].fileName, 1024)}
-            />
-            <Carousel
-              images={this.props.images}
-              active={this.state.selectedIndex}
-              onChange={this.handleChangeImage}
-            />
-          </div>
-        }
+        <FullImage
+          src={getImageLink(this.props.images[this.state.selectedIndex].id,
+            this.props.images[this.state.selectedIndex].fileName, 1024)}
+        />
+        <Carousel
+          images={this.props.images}
+          active={this.state.selectedIndex}
+          onChange={this.handleChangeImage}
+        />
       </div>
     );
   }

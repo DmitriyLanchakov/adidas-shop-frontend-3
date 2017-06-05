@@ -62,3 +62,10 @@ export const Options = styled.div`
     width: auto;
   `}
 `;
+
+export const Price = styled.h2`
+order: 1;
+${media.tablet`
+  order: 2;
+`}
+`;

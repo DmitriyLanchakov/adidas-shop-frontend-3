@@ -4,6 +4,7 @@ import Header from './Header';
 import Gallery from './Gallery';
 import Description from './Description';
 import Button from './Button';
+import get from '../functions/get';
 
 class Details extends Component {
   constructor(props) {
@@ -22,18 +23,17 @@ class Details extends Component {
 
   fetchData(props) {
     const { sport, group, id } = props.match.params;
-    fetch(`https://erodionov-adidas-fake-api.now.sh/v1/products/${sport}/${group}/${id}`)
-      .then(response => response.json())
-      .then(product => this.setState({ product }));
+    get(`${sport}/${group}/${id}`).then(product => this.setState({ product }));
   }
 
   render() {
+    const { title, price, currency, images, description } = this.state.product;
     return (
       <Wrapper>
         <Product>
-          <Header title={this.state.product.title} price={this.state.product.price} />
-          <Gallery images={this.state.product.images} />
-          <Description>{this.state.product.description}</Description>
+          <Header title={title} price={price} currency={currency} />
+          <Gallery images={images} />
+          <Description>{description}</Description>
         </Product>
         <Button>Buy now</Button>
       </Wrapper>

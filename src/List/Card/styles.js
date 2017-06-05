@@ -27,20 +27,7 @@ export const Container = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  display: block;
-  font-size: 30px;
-  color: ${props => (props.sale ? '#fff' : '#000')};
   text-decoration: none;
-  padding: 23px 0 27px 0;
-  transition: none;
-  background: ${props => (props.sale ? 'linear-gradient(107deg, #0c09bf, #966dd8)' : '#fff')};
-  margin-top: 6px;
-
-  &:hover {
-    background-image: ${props => (props.sale ? 'linear-gradient(180deg, #0c09bf, #966dd8)' : 'linear-gradient(107deg, #0c09bf, #966dd8)')};
-    color: #fff;
-  }
-
 `;
 
 export const Image = styled.img`
